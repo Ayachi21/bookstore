@@ -23,6 +23,7 @@ type Author {
 type Query {
   getHello: String!
   users: [User!]!
+  user(id: String!): User!
   book(id: Int!): Book!
   author(id: Int!): Author!
 }
@@ -43,14 +44,14 @@ input CreateUserInput {
   name: String!
   email: String!
   password: String!
-  adress: String!
+  address: String!
 }
 
 input UpdateUserInput {
   name: String
   email: String
   password: String
-  adress: String
+  address: String
   _id: String!
 }
 

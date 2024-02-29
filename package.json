@@ -30,7 +30,7 @@
     "apollo-server-core": "^3.13.0",
     "apollo-server-express": "^3.13.0",
     "graphql": "^16.8.1",
-    "mongoose": "^8.2.0",
+    "mongoose": "^6.12.6",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1"
   },

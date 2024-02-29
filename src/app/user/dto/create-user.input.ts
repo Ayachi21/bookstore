@@ -12,5 +12,5 @@ export class CreateUserInput {
   password: String;
 
   @Field(() => String)
-  adress: String;
+  address: String;
 }

@@ -11,13 +11,14 @@ import { UserModule } from './user/user.module';
 import { BookModule } from './book/book.module';
 import { AuthorModule } from './author/author.module';
 
+
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
-      playground: false,
-      plugins: [ApolloServerPluginLandingPageLocalDefault()],
+      playground: true,
+      // plugins: [ApolloServerPluginLandingPageLocalDefault()],
     }),
     MongooseModule.forRootAsync({
       imports :[ConfigModule],

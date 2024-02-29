@@ -16,8 +16,8 @@ export class UserService {
     return createdUser.save();
   }
 
-  findAll() {
-    return `This action returns all user`;
+  async findAll(): Promise<User[]> {
+    return this.userModel.find();
   }
 
   getUserById(id: MongooSchema.Types.ObjectId) {

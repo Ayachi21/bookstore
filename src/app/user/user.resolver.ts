@@ -15,7 +15,7 @@ export class UserResolver {
   }
 
   @Query(() => [User], { name: 'users' })
-  findAll() {
+  async findAll() :Promise<User[]> {
     return this.userService.findAll();
   }
 
@@ -23,6 +23,7 @@ export class UserResolver {
   // findOne(@Args('id', { type: () => Int }) id: number) {
   //   return this.userService.findOne(id);
   // }
+  @Query(() => User, { name: 'user' })
   getUserById(
     @Args('id',{type:()=> String}) id: MongooSchema.Types.ObjectId,
   ){
